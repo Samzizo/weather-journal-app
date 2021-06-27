@@ -8,10 +8,12 @@ body{
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    background: linear-gradient(50deg, #ce72a5, #8b7683,#3b4a6b);
+    color: #fff;
     justify-content: center;
     grid-gap: 1em;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px #444;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
@@ -22,6 +24,9 @@ body{
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px #444;
+    padding: 15px;
 }
 
 #entryHolder{
@@ -41,15 +46,24 @@ body{
 }
 
 .headline {
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px #444;
+    padding: 50px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 36px;
 
 }
 .title{
-
+    margin: 10px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
+    margin: 10px;
     font-size: 27px;
 }
 
@@ -57,8 +71,11 @@ input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px #444;
+    text-align: center;
+    background:#8b7683;
+    color: #fff;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
@@ -68,19 +85,22 @@ button{
     width: 400px;
     height: 100px;
     background: #3b4a6b;
-    color: #f0d43a;
+    color: #fff;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px #444;
 }
 h1{
     font-size: 36px;
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
+    background:#393e3f;
+    color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px #444;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }

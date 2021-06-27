@@ -41,7 +41,7 @@ const updateUI = async () =>{
 }
 
 //ASYNC post
-const postData = async (url =' ', data = {}) => {
+const postData = async (url ='', data = {}) => {
 	
 	const response = await fetch(url, {
 		method: 'POST',
