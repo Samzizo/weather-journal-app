@@ -23,15 +23,15 @@ const retrieveData = async (baseUrl, zip, apiKey) => {
 const updateUI = async () => {
     const request = await fetch("/all");
     try {
-      const allData = await request.json();
-      // update new entry values
-      document.querySelector("#date").innerHTML = "Date: " + allData.date;
-      document.querySelector("#temp").innerHTML = "Temprature: " + allData.temp + " K";
-      document.querySelector("#content").innerHTML = "Feeling " + allData.content;
+        const allData = await request.json();
+        // update new entry values
+        document.querySelector("#date").innerHTML = "Date: " + allData.date;
+        document.querySelector("#temp").innerHTML = "Temprature: " + allData.temp + " K";
+        document.querySelector("#content").innerHTML = "Feeling " + allData.content;
     } catch (error) {
-      console.log("error", error);
+        console.log("error", error);
     }
-  };
+};
 //ASYNC post
 const postData = async (url ='', data = {}) => {
 	const response = await fetch(url, {
