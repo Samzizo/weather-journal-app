@@ -56,14 +56,14 @@ function postRetrieve() {
 	let zip = document.getElementById('zip').value;
 	let feeling = document.getElementById('feelings').value;
 	retrieveData(baseUrl, zip, apiKey) //get data from api
-  .then(function (data) {
-    postData("/add", {
-      //bundle user data and api, and store
-      temperature: data.main.temp,
-      date: newDate,
-      userResponse: feeling,
-    }).then(function () {
-      updateUI("/data");
-    });
-  });
+	.then(function (data) {
+    	postData("/add", {
+			//bundle user data and api, and store
+			temperature: data.main.temp,
+			date: newDate,
+			userResponse: feeling,
+    	}).then(function () {
+		updateUI("/data");
+    	});
+	});
 }
