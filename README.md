@@ -5,7 +5,7 @@
 This is the third project for [Udacity's Front End Web Developer Nanodegree program](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011).
 The aim of this project is to create an asynchronous web app that uses Weather API ([OpenWeatherMap](https://openweathermap.org/)) and user data to dynamically update the UI.
 
-#### Use to write the code:
+## Use to write the code:
  
 - **HTML** 
 - **CSS**
