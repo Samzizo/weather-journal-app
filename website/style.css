@@ -18,31 +18,11 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
-
-}
-
 .entry{
     background: rgba(59, 74, 107, .4);
     border-radius: 15px;
     box-shadow: 5px 10px 10px #444;
     padding: 15px;
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
 }
 
 .headline {
@@ -113,19 +93,19 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: #fff; 
     font-family: 'Oswald', sans-serif;
 
 } 
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+    color: #fff; 
     font-family: 'Oswald', sans-serif;
 
 } 
 
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+    color: #fff; 
     font-family: 'Oswald', sans-serif;
 
 }
