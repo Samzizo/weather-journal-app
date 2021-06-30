@@ -25,10 +25,9 @@ const updateUI = async () => {
     const request = await fetch("/all");
     try {
         const allData = await request.json();
-        // update new entry values
         document.querySelector("#date").innerHTML = "Date: " + allData.date;
-        document.querySelector("#temp").innerHTML = "Temprature: " + allData.temp + " K";
-        document.querySelector("#content").innerHTML = "Feeling " + allData.content;
+        document.querySelector("#temp").innerHTML = "Temprature: " + allData.temperature + " K";
+        document.querySelector("#content").innerHTML = "Feeling " + allData.userResponse;
     } catch (error) {
         console.log("error", error);
     }
