@@ -19,6 +19,7 @@ const retrieveData = async (baseUrl, zip, apiKey) => {
 		console.log('error', error);
 	}
 }
+
 //ASYNC get from Local
 const updateUI = async () => {
     const request = await fetch("/all");
@@ -56,12 +57,14 @@ function postRetrieve() {
 	let zip = document.getElementById('zip').value;
 	let feeling = document.getElementById('feelings').value;
 	retrieveData(baseUrl, zip, apiKey) //get data from api
-	.then(function(data) {
-		postData ('/add', { //bundle user data and api, and store
-			temperature: data.main.temp, 
-			date: newDate, 
-			userResponse: feeling
-		})
-	})
-	.then(updateUI('/data')) //get locally stored data and update ui
+  .then(function (data) {
+    postData("/add", {
+      //bundle user data and api, and store
+      temperature: data.main.temp,
+      date: newDate,
+      userResponse: feeling,
+    }).then(function () {
+      updateUI("/data");
+    });
+  });
 }

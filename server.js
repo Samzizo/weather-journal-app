@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = [];
+projectData = {};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -7,9 +7,7 @@ const express = require('express');
 // Start up an instance of app
 const app = express();
 
-/* Dependencies */
 const bodyParser = require('body-parser');
-
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,29 +20,33 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-
 // Setup Server
 const port = 3000;
-
-//Spin up the server
 const server = app.listen(port, listening);
 
-// call out to debug
-function listening(){
-    console.log("I'm running :)");
-    console.log(`running on localhost: ${port}`);
-};
+function listening() {
+	console.log('I am running :)');
+	console.log(`running on localhost: ${port}`);
+}
 
-// GET route
+//GET Route:
 app.get('/all', sendData);
+function sendData(req, res){
+	res.send(projectData);
+} 
 
-//function to complete get "all"
-function sendData (req, res) {
-    res.send(projectData);
-    projectData = [];
-};
+//POST Route receiving: temperature – date – user response
+app.post('/add', callback);
+function callback(req, res){
+	projectData = {
+		temperature: req.body.temperature,
+		date: req.body.date,
+		userResponse: req.body.userResponse
+	}
+	res.send(projectData);
+}
 
-// POST route
+//POST new data:
 app.post('/add', callBack);
 
 function callBack(req, res){
